@@ -17,7 +17,12 @@ class MainClass: ObservableObject {
     
     @Published var counter = 1
     
-    @Published var response: GTLRYouTube_ChannelListResponse!
+    @Published var response: GTLRYouTube_ChannelListResponse?
+    @Published var user: GIDGoogleUser?
+    
+    var profile: GIDProfileData? {
+        return user?.profile ?? nil
+    }
 }
 
 //class ContactPickerDelegate: BindableObject {
@@ -96,6 +101,10 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             showAlert(title: "Authentication Error", message: error.localizedDescription)
             self.service.authorizer = nil
         } else {
+            
+            // store user
+            data.user = user
+            
             self.signInButton.isHidden = true
             self.output.isHidden = false
             self.service.authorizer = user.authentication.fetcherAuthorizer()
@@ -126,7 +135,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             showAlert(title: "Error", message: error.localizedDescription)
             return
         }
+        
+        // store response..
         data.response = response
+        
+        
         var outputText = ""
         if let channels = response.items, !channels.isEmpty {
             let channel = response.items![0]
