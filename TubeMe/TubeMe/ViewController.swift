@@ -14,9 +14,35 @@ import SwiftUI
 
 class MainClass: ObservableObject {
     @Published var isLoggedIn = false
+    
+    @Published var counter = 1
+    
+    @Published var response: GTLRYouTube_ChannelListResponse!
 }
 
+//class ContactPickerDelegate: BindableObject {
+//
+//    var willChange = PassthroughSubject<ContactPickerDelegate, Never>()
+//    var didChange = PassthroughSubject<ContactPickerDelegate, Never>()
+//
+//    var contact: String? {
+//        willSet {
+//            willChange.send(self)
+//        }
+//
+//        didSet {
+//            didChange.send(self)
+//        }
+//    }
+//}
+
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    // Data model...
+    @ObservedObject var data = MainClass()
+//    @ObservedObject var data: MainClass = MainClass()
+    
+    
     @IBOutlet weak var emailFied: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -25,9 +51,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeYouTubeReadonly]
-    @ObservedObject var vm = MainClass()
-    
-//    @Binding var isLoggedIn: Bool
 
     private let service = GTLRYouTubeService()
     let signInButton = GIDSignInButton()
@@ -36,12 +59,10 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     @IBOutlet weak var output: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInView.backgroundColor = .clear
+        output.layer.cornerRadius = 20
+        output.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        
-        
-        
-    
-
         // Configure Google Sign-in.
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
@@ -50,6 +71,15 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
         // Add the sign-in button.
         signInView.addSubview(signInButton)
+        
+        signInButton.colorScheme = .dark
+        signInButton.style = .wide
+        
+        signInButton.centerXAnchor.constraint(equalTo: signInView.centerXAnchor).isActive = true
+        signInButton.centerYAnchor.constraint(equalTo: signInView.centerYAnchor).isActive = true
+        signInView.addSubview(signInButton)
+        
+        signInView.transform = .init(translationX: 50, y: 0)
 
         // Add a UITextView to display output.
         output.frame = view.bounds
@@ -96,7 +126,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             showAlert(title: "Error", message: error.localizedDescription)
             return
         }
-
+        data.response = response
         var outputText = ""
         if let channels = response.items, !channels.isEmpty {
             let channel = response.items![0]
@@ -108,6 +138,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             outputText += "view count: \(viewCount!)\n"
         }
         output.text = outputText
+        data.isLoggedIn.toggle()
+        if data.isLoggedIn{
+        let host = UIHostingController(rootView: Home(data: data))
+        self.navigationController?.pushViewController(host, animated: false)
+        }
     }
 
 

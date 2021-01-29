@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+class SessionManager: NSObject {
+    
+}
 
 struct ContentView: View {
+//    var data = MainClass()
+    
+    
     var body: some View {
         NavigationView {
-            CustomViewController()
+            CustomViewController()//.environmentObject(data)
                 .edgesIgnoringSafeArea(.all)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)

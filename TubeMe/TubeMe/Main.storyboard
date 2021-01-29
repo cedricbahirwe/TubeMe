@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XwM-WY-n0W">
-                                <rect key="frame" x="40" y="226" width="334" height="32"/>
+                                <rect key="frame" x="20" y="226" width="374" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="XI0-2B-4b6"/>
@@ -27,11 +27,11 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-oQ-rLz">
-                                <rect key="frame" x="132" y="433" width="150" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="51" y="429" width="312" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="fvx-j3-xtR"/>
-                                    <constraint firstAttribute="height" constant="40" id="hcF-rH-0xi"/>
+                                    <constraint firstAttribute="width" constant="312" id="fvx-j3-xtR"/>
+                                    <constraint firstAttribute="height" constant="48" id="hcF-rH-0xi"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-uT-bx3">
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="180" id="Kgf-ed-C6w"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-aY-dsy">
@@ -58,16 +58,16 @@
                         <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dlz-uT-bx3" secondAttribute="bottom" id="2OH-kq-91q"/>
-                            <constraint firstItem="XwM-WY-n0W" firstAttribute="trailing" secondItem="bEb-aY-dsy" secondAttribute="trailing" constant="-20" id="Kwj-Sp-cm1"/>
+                            <constraint firstItem="XwM-WY-n0W" firstAttribute="trailing" secondItem="bEb-aY-dsy" secondAttribute="trailing" id="Kwj-Sp-cm1"/>
+                            <constraint firstItem="YM6-oQ-rLz" firstAttribute="centerX" secondItem="BnS-JJ-AV6" secondAttribute="centerX" id="Rp3-Bj-Aq4"/>
                             <constraint firstItem="BnS-JJ-AV6" firstAttribute="trailing" secondItem="dlz-uT-bx3" secondAttribute="trailing" id="Txj-pO-OQ3"/>
                             <constraint firstItem="XwM-WY-n0W" firstAttribute="top" secondItem="bEb-aY-dsy" secondAttribute="bottom" constant="30" id="VbJ-Tb-RqR"/>
-                            <constraint firstItem="XwM-WY-n0W" firstAttribute="leading" secondItem="bEb-aY-dsy" secondAttribute="leading" constant="20" id="aya-HZ-9kr"/>
+                            <constraint firstItem="XwM-WY-n0W" firstAttribute="leading" secondItem="bEb-aY-dsy" secondAttribute="leading" id="aya-HZ-9kr"/>
                             <constraint firstItem="YM6-oQ-rLz" firstAttribute="centerY" secondItem="BnS-JJ-AV6" secondAttribute="centerY" id="ffk-Ih-sSe"/>
                             <constraint firstItem="dlz-uT-bx3" firstAttribute="leading" secondItem="BnS-JJ-AV6" secondAttribute="leading" id="hEI-Or-N1S"/>
                             <constraint firstItem="bEb-aY-dsy" firstAttribute="top" secondItem="BnS-JJ-AV6" secondAttribute="top" constant="120" id="jBh-cG-cKg"/>
                             <constraint firstItem="bEb-aY-dsy" firstAttribute="leading" secondItem="BnS-JJ-AV6" secondAttribute="leading" constant="20" id="lPh-DK-Gz6"/>
                             <constraint firstItem="BnS-JJ-AV6" firstAttribute="trailing" secondItem="bEb-aY-dsy" secondAttribute="trailing" constant="20" id="nWx-ae-pJ6"/>
-                            <constraint firstItem="YM6-oQ-rLz" firstAttribute="centerX" secondItem="BnS-JJ-AV6" secondAttribute="centerX" id="sMg-x5-BJW"/>
                         </constraints>
                     </view>
                     <connections>

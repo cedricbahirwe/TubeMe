@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824F750925C4A1E000690177 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F750825C4A1DF00690177 /* Home.swift */; };
 		82E8585B25C48E0C0031B820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8585A25C48E0C0031B820 /* AppDelegate.swift */; };
 		82E8585D25C48E0C0031B820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8585C25C48E0C0031B820 /* SceneDelegate.swift */; };
 		82E8585F25C48E0C0031B820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8585E25C48E0C0031B820 /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		394F46051CAAF29D69407666 /* Pods-TubeMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubeMe.debug.xcconfig"; path = "Target Support Files/Pods-TubeMe/Pods-TubeMe.debug.xcconfig"; sourceTree = "<group>"; };
 		74894E5E2E0F3D9C286590AD /* Pods_TubeMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubeMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		824F750825C4A1DF00690177 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		82E8585725C48E0C0031B820 /* TubeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E8585A25C48E0C0031B820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82E8585C25C48E0C0031B820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				82E8585E25C48E0C0031B820 /* ContentView.swift */,
 				82E8588825C48F960031B820 /* Main.storyboard */,
 				82E8588B25C48FA30031B820 /* ViewController.swift */,
+				824F750825C4A1DF00690177 /* Home.swift */,
 				82E8586025C48E0E0031B820 /* Assets.xcassets */,
 				82E8586525C48E0E0031B820 /* LaunchScreen.storyboard */,
 				82E8586825C48E0E0031B820 /* Info.plist */,
@@ -244,6 +247,7 @@
 			files = (
 				82E8585B25C48E0C0031B820 /* AppDelegate.swift in Sources */,
 				82E8585D25C48E0C0031B820 /* SceneDelegate.swift in Sources */,
+				824F750925C4A1E000690177 /* Home.swift in Sources */,
 				82E8588C25C48FA30031B820 /* ViewController.swift in Sources */,
 				82E8585F25C48E0C0031B820 /* ContentView.swift in Sources */,
 			);
