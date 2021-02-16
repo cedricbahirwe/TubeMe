@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8229144525CB2C6D005ECEE5 /* TubeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229144425CB2C6D005ECEE5 /* TubeMeTests.swift */; };
 		824F750925C4A1E000690177 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F750825C4A1DF00690177 /* Home.swift */; };
 		82E8585B25C48E0C0031B820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8585A25C48E0C0031B820 /* AppDelegate.swift */; };
 		82E8585D25C48E0C0031B820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8585C25C48E0C0031B820 /* SceneDelegate.swift */; };
@@ -20,9 +21,22 @@
 		A3DBF779C785A0C92DB40AE2 /* Pods_TubeMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74894E5E2E0F3D9C286590AD /* Pods_TubeMe.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8229144725CB2C6D005ECEE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82E8584F25C48E0C0031B820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82E8585625C48E0C0031B820;
+			remoteInfo = TubeMe;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		394F46051CAAF29D69407666 /* Pods-TubeMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubeMe.debug.xcconfig"; path = "Target Support Files/Pods-TubeMe/Pods-TubeMe.debug.xcconfig"; sourceTree = "<group>"; };
 		74894E5E2E0F3D9C286590AD /* Pods_TubeMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubeMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8229144225CB2C6D005ECEE5 /* TubeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8229144425CB2C6D005ECEE5 /* TubeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeMeTests.swift; sourceTree = "<group>"; };
+		8229144625CB2C6D005ECEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824F750825C4A1DF00690177 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		82E8585725C48E0C0031B820 /* TubeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E8585A25C48E0C0031B820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8229143F25CB2C6D005ECEE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82E8585425C48E0C0031B820 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +80,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8229144325CB2C6D005ECEE5 /* TubeMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8229144425CB2C6D005ECEE5 /* TubeMeTests.swift */,
+				8229144625CB2C6D005ECEE5 /* Info.plist */,
+			);
+			path = TubeMeTests;
+			sourceTree = "<group>";
+		};
 		82E8584E25C48E0C0031B820 = {
 			isa = PBXGroup;
 			children = (
 				82E8585925C48E0C0031B820 /* TubeMe */,
+				8229144325CB2C6D005ECEE5 /* TubeMeTests */,
 				82E8585825C48E0C0031B820 /* Products */,
 				42549250E44220C3C0133615 /* Pods */,
 				C97DEF1534BE999FF64FE79F /* Frameworks */,
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				82E8585725C48E0C0031B820 /* TubeMe.app */,
+				8229144225CB2C6D005ECEE5 /* TubeMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +146,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8229144125CB2C6D005ECEE5 /* TubeMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8229144B25CB2C6D005ECEE5 /* Build configuration list for PBXNativeTarget "TubeMeTests" */;
+			buildPhases = (
+				8229143E25CB2C6D005ECEE5 /* Sources */,
+				8229143F25CB2C6D005ECEE5 /* Frameworks */,
+				8229144025CB2C6D005ECEE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8229144825CB2C6D005ECEE5 /* PBXTargetDependency */,
+			);
+			name = TubeMeTests;
+			productName = TubeMeTests;
+			productReference = 8229144225CB2C6D005ECEE5 /* TubeMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		82E8585625C48E0C0031B820 /* TubeMe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82E8586B25C48E0E0031B820 /* Build configuration list for PBXNativeTarget "TubeMe" */;
@@ -143,6 +193,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					8229144125CB2C6D005ECEE5 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 82E8585625C48E0C0031B820;
+					};
 					82E8585625C48E0C0031B820 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -162,11 +216,19 @@
 			projectRoot = "";
 			targets = (
 				82E8585625C48E0C0031B820 /* TubeMe */,
+				8229144125CB2C6D005ECEE5 /* TubeMeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8229144025CB2C6D005ECEE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82E8585525C48E0C0031B820 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +303,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8229143E25CB2C6D005ECEE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8229144525CB2C6D005ECEE5 /* TubeMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82E8585325C48E0C0031B820 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +325,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8229144825CB2C6D005ECEE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82E8585625C48E0C0031B820 /* TubeMe */;
+			targetProxy = 8229144725CB2C6D005ECEE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		82E8586525C48E0E0031B820 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -267,6 +345,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8229144925CB2C6D005ECEE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V9B6LUW22;
+				INFOPLIST_FILE = TubeMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedricbahirwe.TubeMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TubeMe.app/TubeMe";
+			};
+			name = Debug;
+		};
+		8229144A25CB2C6D005ECEE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V9B6LUW22;
+				INFOPLIST_FILE = TubeMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedricbahirwe.TubeMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TubeMe.app/TubeMe";
+			};
+			name = Release;
+		};
 		82E8586925C48E0E0031B820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +550,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8229144B25CB2C6D005ECEE5 /* Build configuration list for PBXNativeTarget "TubeMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8229144925CB2C6D005ECEE5 /* Debug */,
+				8229144A25CB2C6D005ECEE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82E8585225C48E0C0031B820 /* Build configuration list for PBXProject "TubeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
